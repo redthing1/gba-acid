@@ -40,8 +40,8 @@ LIBS		:= -ltonc -lgfx
 BUILD		:= build
 SRCDIRS		:= source
 DATADIRS	:= data
-INCDIRS		:= include
-LIBDIRS		:= $(TONCCODE)/tonclib
+INCDIRS		:= $(DEVKITPRO)/libtonc/include
+LIBDIRS		:= $(DEVKITPRO)/libtonc
 
 # --- switches ---
 
@@ -139,7 +139,7 @@ export OFILES	:=	$(addsuffix .o, $(BINFILES))					\
 					$(SFILES:.s=.o)
 
 # --- Create include and library search paths ---
-export INCLUDE	:=	$(foreach dir,$(INCDIRS),-I$(CURDIR)/$(dir))	\
+export INCLUDE	:=	$(foreach dir,$(INCDIRS),-I$(dir))	\
 					$(foreach dir,$(LIBDIRS),-I$(dir)/include)		\
 					-I$(CURDIR)/$(BUILD)
  

@@ -1,2 +1,0 @@
-verdana9_b4.o: \
- /Users/zaydqumsieh/Documents/Programming/gba-acid/tonclib/src/font/verdana9_b4.s
